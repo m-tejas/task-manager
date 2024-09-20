@@ -1,0 +1,93 @@
+/* General App styles */
+.App {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.task-board {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.task-column {
+  width: 30%;
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 8px;
+  min-height: 400px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.task-card {
+  background-color: white;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* Add Task Styles */
+.add-task {
+  margin-top: 20px;
+}
+
+.add-task input {
+  padding: 10px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add-task button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-task button:hover {
+  background-color: #0056b3;
+}
+
+/* Login/Register Form Styles */
+.login, .register {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 50px auto;
+}
+
+.login form, .register form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login input, .register input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login button, .register button {
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login button:hover, .register button:hover {
+  background-color: #218838;
+}
