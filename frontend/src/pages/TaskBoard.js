@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getTasks, createTask } from '../services/api';
+import { getTasks, createTask, updateTask } from '../services/api';
 import TaskColumn from '../components/TaskColumn';
 import { DragDropContext } from 'react-beautiful-dnd';
 import { toast } from 'react-toastify';
@@ -24,7 +24,7 @@ function TaskBoard() {
     if (newTask.trim()) {
       try {
         const { data } = await createTask({ title: newTask, column: 'todo' });
-        setTasks([...tasks, data]);
+        setTasks((prevTasks) => [...prevTasks, data]);
         setNewTask('');
       } catch (error) {
         toast.error("Error adding new task.");
@@ -43,7 +43,7 @@ function TaskBoard() {
     updatedTask.column = destination.droppableId;
 
     try {
-      await createTask(draggableId, updatedTask);
+      await updateTask(draggableId, updatedTask);
       setTasks((prevTasks) =>
         prevTasks.map((task) => (task._id === draggableId ? updatedTask : task))
       );

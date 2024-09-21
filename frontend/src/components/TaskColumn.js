@@ -12,7 +12,7 @@ function TaskColumn({ tasks, status }) {
         >
           <h3>{status.toUpperCase()}</h3>
           {tasks
-            .filter((task) => task.status === status)
+            .filter((task) => task.column === status)
             .map((task, index) => (
               <Draggable key={task._id} draggableId={task._id} index={index}>
                 {(provided) => (
